@@ -1,6 +1,10 @@
-<h1>
+<h2>
   Dit is de eindpresentatie voor mijn stage bij Kobalt Digital B.V. gemaakt met behulp van Reveal.js
-</h1>
+</h2>
+
+<p>
+  De code van de presentatie staat in de index.html
+</p>
 
 <p align="center">
   <a href="https://revealjs.com">
