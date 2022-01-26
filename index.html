@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Eindpresentatie Stage Ruben Hoogeveen</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/kobalt.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +16,139 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				
+				<section data-background-image="/img/background.svg">
+					<a href="https://kobaltdigital.nl/">
+						<img src="/img/Kobalt-logo-full.svg"/>
+					</a>
+					<p>
+						Ruben Hoogeveen | 632079 | INF3SA
+					</p>
+				</section>
+				
+				<section data-background-image="/img/background.svg" data-auto-animate>
+					<h3>Inhoud</h3>
+					<ul>
+						<li>Bedrijfs omschrijving</li>
+						<li>Opdrachten</li>
+						<li>Reflectie</li>
+					</ul>
+				</section>
+				<section data-background-image="/img/background.svg" data-auto-animate>
+					<h3>Inhoud</h3>
+					<ul>
+						<li>Bedrijfs omschrijving</li>
+						<li>Opdrachten</li>
+						<li style="margin-left: 3rem;">SED.nu</li>
+						<li style="margin-left: 3rem;">Scrumbord</li>
+						<li style="margin-left: 3rem;">Dagelijkse werkzaamheden</li>
+						<li>Reflectie</li>
+					</ul>
+				</section>
+
+				<section data-background-image="/img/background.svg">
+					<section>
+						<h1>Over Kobalt</h1>
+					</section>
+					<section>
+						<h3>Plek</h3>
+						<img src="/img/route.png"/>
+						<p>Koelmalaan 350, Unit 3.08, 1812 PS Alkmaar</p>
+					</section>
+					<section data-background-color="white" data-background-iframe="https://kobaltdigital.nl/over/#team" data-background-interactive>
+						<div class="fragment fade-out" style="position: absolute; width: 25%; left: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h2>Meet the team</h2>
+						</div>
+					</section>
+					<section data-background-color="white" data-background-iframe="https://kobaltdigital.nl/cases/lokaalgeschenk/" data-background-interactive>
+						<div class="fragment fade-out" style="position: absolute; width: 30%; left: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h2>lokaalgeschenk</h2>
+						</div>
+					</section>
+				</section>
+				
+				<section data-background-image="/img/background.svg">
+					<h3>SED.nu</h3>
+					<div class="r-stack">
+						<img class="fragment fade-in-then-out" height="300px" src="/img/laravel-logo.png"/>
+						<pre class="fragment hljs fade-in-then-out"><code data-noescape data-trim data-line-numbers>
+							public function getTableValues($lowestRow, $lowestColumn, $highestRow, $highestColumn, $spreadsheet)
+							{
+									$worksheet = $spreadsheet->getSheet(0);
+									$lowestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($lowestColumn);
+									$highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn);
+									$values = [];
+
+									for ($row = $lowestRow; $row <= $highestRow; ++$row) {
+											for ($col = $lowestColumnIndex; $col <= $highestColumnIndex; ++$col) {
+													$value = $worksheet->getCellByColumnAndRow($col, $row)->getCalculatedValue();
+													$letter = num2alpha($col - 1);
+													$values[$row][$letter] = $value;
+											}
+									}
+									return $values;
+							}
+						</code></pre>
+						<img class="fragment fade-in-then-out" height="300px" src="/img/Tailwind_CSS_Logo.png"/>
+						<pre class="fragment fade-in hljs"><code data-trim data-line-numbers="1-3|5-21">
+							<section class="bg-black flex items-center w-16 h-8">
+								<span class="text-lg text-white">Kobalt Digital</span>
+							</section>
+
+							<section class="text-section">
+								<span class="title">Kobalt Digital</span>
+							</section>
+							<style>
+								.text-section {
+									background-color: black;
+									display: flex;
+									align-items: center;
+									width: 4rem;
+									height: 2rem;
+								}
+								.title {
+									font-size: 1.125rem;
+									line-height: 1.75rem;
+									color: white;
+								}
+							</style>
+						</code></pre>
+					</div>
+				</section>
+
+				<section data-background-image="/img/background.svg">
+					<h3>Scrumbord</h3>
+					<div class="r-stack">
+						<img class="fragment fade-in-then-out" height="300px" src="/img/laravel-logo.png"/>
+						<img class="fragment fade-in-then-out" height="300px" src="/img/Tailwind_CSS_Logo.png"/>
+						<img class="fragment fade-in-then-out" height="300px" src="/img/Vuejs-logo.png"/>
+					</div>
+				</section>
+
+				<section data-background-image="/img/background.svg">
+					<h2>Dagelijkse werkzaamheden</h2>
+				</section>
+
+				<section data-background-image="/img/background.svg">
+					<h1 style="text-transform: lowercase;">Reflectie</h1>
+					<h1 style="text-transform: lowercase;">ǝᴉʇɔǝlɟǝɹ</h1>
+				</section>
+
+				<section data-background-image="/img/background.svg">
+					<img src="https://media.giphy.com/media/lb5njh6zDXFauXpBtC/giphy.gif"/>
+				</section>
+
+				<section data-background-image="/img/background.svg">
+					<div class="r-stack">
+						<div>
+							<h3>Gemaakt met</h3>
+							<a href="https://revealjs.com">
+								<img src="https://static.slid.es/reveal/logo-v1/reveal-white-text.svg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+							</a>
+						</div>
+						<h6 class="fragment fade-in">The HTML Presentation Framework</h6>
+					</div>
+				</section>
 			</div>
 		</div>
 
