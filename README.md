@@ -7,7 +7,10 @@
 </p>
 
 <br>
----
+
+___
+
+<br>
 
 <p align="center">
   <a href="https://revealjs.com">
@@ -24,7 +27,8 @@ The framework comes with a powerful feature set including [nested slides](https:
 
 <br>
 
---- 
+___
+
 <div align="center">
   MIT licensed | Copyright © 2011-2022 Hakim El Hattab, https://hakim.se
 </div>
